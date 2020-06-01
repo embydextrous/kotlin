@@ -1,4 +1,8 @@
 class A(name: String) {
+    // static blocks and initializers run before secondary constructors as if they are part of 
+    // primary constructors.
+    // Also, they run in order.
+
     val a = "This is $name".also(::println)
 
     init {
