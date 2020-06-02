@@ -5,7 +5,7 @@ open class A {
 
     fun foo() {
         val d = D()
-        // println("${d.e}") // e is private in D
+        // println("${d.e}") // e is private in D [This is allowed in Java]
         println("f is ${d.f}")
     }
 
