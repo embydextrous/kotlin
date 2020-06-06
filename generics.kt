@@ -6,7 +6,7 @@ class Generics<out T>(val t: T) {
     fun get(): T = t
 }
 
-class Generics2<T>() {
+class Generics2<in T>() {
     //fun get(): T = t // illegal won't compile
     fun print(t: T) {
         println(t)
@@ -15,7 +15,7 @@ class Generics2<T>() {
 
 fun main() {
     val g: Generics<Any> = Generics<String>("Arjit Agarwal") // This doesn't work in Java
-    val g2: Generics2<Any> = Generics2<Any>()
+    val g2: Generics2<String> = Generics2<Any>()
     g2.print("Any()")
     println(g.get())
 
