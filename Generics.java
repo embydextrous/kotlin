@@ -4,7 +4,7 @@ import java.util.List;
 public class Generics {
     private static List<String> l1 = new ArrayList<>();
     public static void main(String[] args) {
-        // foo(l1); illegal as List<String> is not a subtype of List<Object> invariants
+        //foo(l1); // illegal as List<String> is not a subtype of List<Object> invariants
         bar(l1); // legal List<String> is a subtype of List<? extends Object> called as covariant
 
         //

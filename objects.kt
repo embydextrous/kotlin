@@ -19,7 +19,7 @@ open class C {
     // objects with no supertypes
     // type inferenced is Any
     val b = object {
-        val x: Int = d // can access from outer scope
+        val x: Int = d // can't access from outer scope
         val y: Int = 3
 
         fun addition(): Int = x + y
@@ -43,7 +43,7 @@ open class C {
     // However, on the JVM you can have members of companion objects generated as real static methods 
     // and fields, if you use the @JvmStatic annotation
     // a companion object is initialized when the corresponding class is loaded (resolved), 
-    // matching the semantics of a Java static initializer.
+    // matching the semantics of a Java static initializer..
     companion object Named {
         fun bar() { println("C's Named Companion") }
 
