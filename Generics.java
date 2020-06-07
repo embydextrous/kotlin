@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
-
 
 public class Generics {
     private static List<String> l1 = new ArrayList<>();
@@ -11,6 +12,9 @@ public class Generics {
         //
         // Generics2<Object> g = new Generics2<String>("Arjit Agarwal"); // Illegal due to types
         Generics2<String> g2 = new Generics2<String>("Arjit Agarwal"); // legal
+        List<String> s = new ArrayList<>();
+        s.add("Arjit");
+        Collections.addAll(s, "elements", "non-elements");
     }
 
     public static void foo(List<Object> l1) {
